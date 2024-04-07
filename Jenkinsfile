@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Build Docker Image') {         
             steps{                
-	            sh 'sudo docker build -t cuonghoang2k2/my-app-2.0:v1 .'           
+	            sh 'docker build -t cuonghoang2k2/my-app-2.0:v1 .'           
                 echo 'Build Image Completed'                
             }           
         }
@@ -20,7 +20,7 @@ pipeline {
         }               
         stage('Push Image to Docker Hub') {         
             steps{                            
-	            sh 'sudo docker push cuonghoang2k2/my-app-2.0:v1'                 
+	            sh 'docker push cuonghoang2k2/my-app-2.0:v1'                 
                 echo 'Push Image Completed'       
             }           
         }         

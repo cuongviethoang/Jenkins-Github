@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t cuonghoang2k2/my-app-2.0 .'
-                sh 'docker push cuonghoang2k2/my-app-2.0:v1'
+                sh 'sudo docker build -t cuonghoang2k2/my-app-2.0 .'
+                sh 'sudo docker push cuonghoang2k2/my-app-2.0:v1'
                 
             }
         }
